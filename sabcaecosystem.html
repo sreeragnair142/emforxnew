@@ -293,23 +293,87 @@
         <!-- Page Header End -->
 
         <!-- Page Services Section Start -->
-<div class="flowchart-section" style="position: relative; bottom: 80px; overflow: hidden;">
-  <div class="container" style="overflow: hidden; max-width: 100%;">
-    <div class="row">
-      <div class="col-lg-12 text-center" style="overflow: hidden;">
-        <iframe src="images/flowchartlink.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                type="application/pdf"
-                width="100%"
-                height="700"
-                style="border:none; display:block; width:100vw; max-width:100%; overflow:hidden;"
-                scrolling="no">
-        </iframe>
-      </div>
+    <style>
+      
+     
+
+        .col-lg-12 {
+            text-align: center;
+            width: 100%;
+            padding: 0;
+        }
+
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .pdf-iframe {
+            border: none;
+            display: block;
+            width: calc(100% + 20px); /* Extend width to push scrollbar out of view */
+            height: calc(100% + 20px); /* Extend height to push scrollbar out of view */
+            margin-right: -20px; /* Pull back to original position */
+            margin-bottom: -20px; /* Pull back to original position */
+            overflow: hidden;
+        }
+
+        /* Alternative approach using CSS scrollbar hiding */
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            overflow: -moz-scrollbars-none; /* Firefox */
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Fallback styling */
+        .flowchart-placeholder {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            border: 2px solid #444;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+        }
+
+        .ecosystem-title {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Method 1: Extended iframe approach -->
+    <div class="flowchart-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pdf-container no-scrollbar">
+                        <iframe src="images/flowchartlink.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            class="pdf-iframe no-scrollbar"
+                            type="application/pdf"
+                            scrolling="no"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
+   
 
 
 

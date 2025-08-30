@@ -7832,3 +7832,14 @@ header.main-header .header-sticky.active {
             background: #2a1f7f;
         }
 
+iframe {
+  overflow: hidden !important;
+}
+.flowchart-section iframe::-webkit-scrollbar {
+  display: none;
+}
+
+.flowchart-section iframe {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}

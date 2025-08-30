@@ -232,15 +232,17 @@
                             <div
                                 class="app-store-links d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
                                 <a href="https://apps.apple.com/in/app/sabka-jobs-more/id1670276730">
-                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="App Store"
-                                    style="width: 100%; max-width: 150px; cursor: pointer; height: auto;" id="play" />
-                                    </a>
+                                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                        alt="App Store"
+                                        style="width: 100%; max-width: 150px; cursor: pointer; height: auto;"
+                                        id="play" />
+                                </a>
 
-                                    <a href="https://play.google.com/store/apps/details?id=com.sabkaworld.app">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play"
-                                    style="width: 100%; max-width: 150px; cursor: pointer; height: auto;" id="app" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.sabkaworld.app">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Google Play"
+                                        style="width: 100%; max-width: 150px; cursor: pointer; height: auto;"
+                                        id="app" /></a>
                             </div>
                         </div>
                     </div>
@@ -398,22 +400,78 @@
                 </div>
             </div><br><br><br><br><br>
 
-           <div class="flowchart-section" style="position: relative; bottom: 80px; overflow: hidden;">
-  <div class="container" style="overflow: hidden; max-width: 100%;">
-    <div class="row">
-      <div class="col-lg-12 text-center" style="overflow: hidden;">
-        <iframe src="images/flowchartlink.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                type="application/pdf"
-                width="100%"
-                height="700"
-                style="border:none; display:block; width:100vw; max-width:100%; overflow:hidden;"
-                scrolling="no">
-        </iframe>
-      </div>
+ 
+    <style>
+        .col-lg-12 {
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            padding: 0;
+        }
+
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .pdf-iframe {
+            border: none;
+            display: block;
+            width: calc(100% + 20px); /* Extend width to push scrollbar out of view */
+            height: calc(100% + 20px); /* Extend height to push scrollbar out of view */
+            margin-right: -20px; /* Pull back to original position */
+            margin-bottom: -20px; /* Pull back to original position */
+            overflow: hidden;
+        }
+
+        /* Alternative approach using CSS scrollbar hiding */
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            overflow: -moz-scrollbars-none; /* Firefox */
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Fallback styling */
+        .flowchart-placeholder {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            border: 2px solid #444;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+        }
+
+       
+    </style>
+
+    <!-- Method 1: Extended iframe approach -->
+    <div class="flowchart-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pdf-container no-scrollbar">
+                        <iframe src="images/flowchartlink.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            class="pdf-iframe no-scrollbar"
+                            type="application/pdf"
+                            scrolling="no"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div> 
-            <!-- About Us Section Start -->
+
+               <!-- About Us Section Start -->
             <div class="about-us">
                 <div class="container">
                     <div class="row section-row align-items-center">
@@ -728,7 +786,7 @@
                         </div>
 
 
-                         <div class="col-lg-4 col-6">
+                        <div class="col-lg-4 col-6">
                             <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
                                 <a href="images/gallery-4.jpg" data-cursor-text="View">
                                     <figure class="image-anime">
@@ -743,7 +801,7 @@
                         </div>
 
 
-                         <div class="col-lg-4 col-6">
+                        <div class="col-lg-4 col-6">
                             <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
                                 <a href="images/gallery-4.jpg" data-cursor-text="View">
                                     <figure class="image-anime">
@@ -761,7 +819,7 @@
                 </div>
             </div>
 
-           
+
             <!-- Gallery Section End -->
 
 
@@ -1344,19 +1402,24 @@
                         <div class="footer-social">
                             <h3>Follow Us</h3>
                             <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100084945351102" class="social-link facebook" aria-label="Facebook">
+                                <a href="https://www.facebook.com/profile.php?id=100084945351102"
+                                    class="social-link facebook" aria-label="Facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="https://x.com/SabkaApp" class="social-link x-twitter" aria-label="X (formerly Twitter)">
+                                <a href="https://x.com/SabkaApp" class="social-link x-twitter"
+                                    aria-label="X (formerly Twitter)">
                                     <i class="fab fa-x-twitter"></i>
                                 </a>
-                                <a href="https://www.instagram.com/sabkaworld/" class="social-link instagram" aria-label="Instagram">
+                                <a href="https://www.instagram.com/sabkaworld/" class="social-link instagram"
+                                    aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/company/90391118/admin/" class="social-link linkedin" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/company/90391118/admin/" class="social-link linkedin"
+                                    aria-label="LinkedIn">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@sabkaworld" class="social-link youtube" aria-label="YouTube">
+                                <a href="https://www.youtube.com/@sabkaworld" class="social-link youtube"
+                                    aria-label="YouTube">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
@@ -1380,7 +1443,7 @@
                         <div class="footer-links">
                             <h3>Our Location</h3>
                             <p> <b>EmforX Solutions Pvt Ltd</b> <br>
-                                 Tower 2, Hilite Business Park , Hilite City, National Highway
+                                Tower 2, Hilite Business Park , Hilite City, National Highway
                                 17 Bypass, G A College P.O, Kozhikode, Kerala, India-673014</p>
                         </div>
                         <!-- Footer Links End -->
