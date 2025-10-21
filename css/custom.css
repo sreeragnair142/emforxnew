@@ -7843,3 +7843,28 @@ iframe {
   -ms-overflow-style: none;  /* IE & Edge */
   scrollbar-width: none;     /* Firefox */
 }
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures it fills the area without distortion */
+  z-index: -2; /* stays behind content */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.6); /* dark overlay for contrast */
+  z-index: -1;
+}
